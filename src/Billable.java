@@ -1,6 +1,4 @@
-
 // INTERFACE 1
-public interface Billable {
-
+interface Billable {
     void showBill();
 }

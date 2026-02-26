@@ -1,6 +1,4 @@
-
 // INTERFACE 2
-public interface Schedulable {
-
+interface Schedulable {
     void schedule();
 }
