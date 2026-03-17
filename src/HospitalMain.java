@@ -7,12 +7,19 @@ public class HospitalMain {
         Scanner sc = new Scanner(System.in);
 
         try {
-            System.out.print("Enter patient name: ");
-            String patientName = sc.nextLine();
+              System.out.print("Enter patient name: ");
+String patientName = sc.nextLine();
+if (!patientName.matches("[a-zA-Z ]+")) {
+    System.out.println("Invalid patient name! .");
+    return; // stops the program
+}
 
-            System.out.print("Enter doctor name: ");
-            String doctorName = sc.nextLine();
-
+System.out.print("Enter doctor name: ");
+String doctorName = sc.nextLine();
+if (!doctorName.matches("[a-zA-Z ]+")) {
+    System.out.println("Invalid doctor name!.");
+    return;
+}
             Patient patient = new Patient(patientName);
             Doctor doctor = new Doctor(doctorName);
             Billing bill = new Billing();
